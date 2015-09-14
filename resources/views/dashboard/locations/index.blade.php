@@ -6,17 +6,17 @@
 
 	<div class="container">
 
-		<button id="create_location" class="btn btn-primary col-sm-2">Create Location</button>
+	<button id="create_location" class="btn btn-primary col-sm-2">Create Location</button>
 
-		<div id="create_location_container" class="{!! (isset($display)) ? '' : 'hidden' !!}">
-			{!! Form::open(
-				array(
-					'url' => '/dashboard/locations',
-					'method' => 'POST',
-					'class' => 'form-horizontal col-sm-6 col-sm-offset-3',
-					'id' => 'create_location_form'
-				))
-			!!}
+	<div id="create_location_container" class="{!! (isset($display)) ? '' : 'hidden' !!}">
+		{!! Form::open(
+			array(
+				'url' => '/dashboard/locations',
+				'method' => 'POST',
+				'class' => 'form-horizontal col-sm-6 col-sm-offset-3',
+				'id' => 'create_location_form'
+			))
+		!!}
 			<div id="create_location_group">
 				<div class="row">
 					<div class="col-sm-12">
@@ -43,18 +43,18 @@
 				<div class="form-group">
 					<div>
 						{!! Form::submit(
-                            'Submit',
-                            array(
-                                'id' => 'finish_locations',
-                                'class' => 'btn btn-primary'
-                            ))
-                        !!}
-						or
-						<a href="javascript;" id="cancel_locations">Cancel</a>
+								'Submit',
+								array(
+									'id' => 'finish_locations',
+									'class' => 'btn btn-primary'
+								))
+							!!}
+							or
+							<a href="javascript;" id="cancel_locations">Cancel</a>
 
+						</div>
 					</div>
 				</div>
-			</div>
 
 			{!! Form::close() !!}
 		</div>

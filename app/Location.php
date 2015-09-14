@@ -25,4 +25,9 @@ class Location extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    public function seasons()
+    {
+        return $this->hasMany('App\Season');
+    }
 }

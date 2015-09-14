@@ -31,6 +31,9 @@ Route::group(['middleware' => ['auth']], function()
     Route::post('/dashboard/locations/setLocation', 'Dashboard\LocationsController@postSetLocation');
     Route::post('/dashboard/locations/deleteLocation', 'Dashboard\LocationsController@postDeleteLocation');
 
+    //Seasons Controller
+    Route::get('/dashboard/seasons', 'Dashboard\SeasonsController@getSeasons');
+
 
     /*
     |--------------------------------------------------------------------------

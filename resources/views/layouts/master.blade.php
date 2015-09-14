@@ -9,9 +9,12 @@
         <link href="{{ URL::asset('/css/main.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('vendor/bootstrap/dist/css/bootstrap.min.css') }}" rel="stylesheet">
         <link href="{{ URL::asset('vendor/bootstrap/dist/css/bootstrap-theme.min.css') }}" rel="stylesheet">
+        <link href="{{ URL::asset('vendor/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css') }}" rel="stylesheet">
         <script src="{{ URL::asset('vendor/jquery/dist/jquery.min.js') }}"></script>
         <script src="{{ URL::asset('js/config.js') }}"></script>
         <script src="{{ URL::asset('vendor/bootstrap/dist/js/bootstrap.min.js') }}"></script>
+        <script src="{{ URL::asset('vendor/moment/min/moment.min.js') }}"></script>
+        <script src="{{ URL::asset('vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js') }}"></script>
         <script src="{{ URL::asset('js/layouts/master/account_menu.js') }}"></script>
     </head>
     <body role="document">
@@ -89,7 +92,9 @@
                         <li class="{!! (isset($active) && $active == 'locations') ? 'active' : '' !!}">
                             <a href="{!! URL::action('Dashboard\LocationsController@getLocations') !!}">Locations</a>
                         </li>
-                        <li><a href="/admin/seasons">Seasons</a></li>
+                        <li class="{!! (isset($active) && $active == 'seasons') ? 'active' : '' !!}">
+                            <a href="{!! URL::action('Dashboard\SeasonsController@getSeasons') !!}">Seasons</a>
+                        </li>
                         <li><a href="/admin/tournaments">Tournaments</a></li>
                     </ul>
                 </div>
